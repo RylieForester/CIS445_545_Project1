@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communications Page</title>
+    <link rel="stylesheet" href="RylieForester_design.css">
+
+    <style>
+        body{
+            /*Profile Page Design Details*/
+            background-color: rgb(109, 135, 154);
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            /*Border Design Details*/
+            border-style: double;
+            border-color: rgb(62, 92, 145);
+            border-radius: 5ch;
+            border-width: 1ch;
+        }
+
+        /*List Design Details*/
+        li{
+            margin: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!--Header Details-->
+    <h1 id="commPageHeader">Rylie Forester</h1>
+    <h2 style="text-align: center;">My Communications</h2>
+
+    <div>
+        <!--Image Details-->
+        <div style="text-align: right; float: right; padding-left: 50px; padding-right: 50px;">
+            <img src="Magnolia Img.jpeg" style="width: 420px; border-style: double; border-color: rgb(62, 92, 145); border-width: 5px;">
+        </div>
+
+        <p class="text">
+            Below are my current forms of communication:
+            <br>
+        </p>
+
+        <!--List Details-->
+        <p class="text"> 
+            <div style="margin: 30px;">
+                <UI>
+                    <li>Email: rforester@mail.bradley.edu</li>
+                </UI>
+                <br><br>
+            </div>
+        </p>
+
+        <!--Comment Box Details-->
+        <p class="text">
+            Feel free to leave your comments and/or questions below:
+            <br>
+            (Click the <b>Submit</b> button to submit a comment and click the <b>Clear</b> button to clear a comment.)
+        </p>
+
+        <!--The following website helped me to construct a functioning comment box for my website:
+            https://www.delftstack.com/howto/javascript/create-comment-box-in-html-and-javascript/-->
+        <p>
+            <form action="" method="">
+                <label for="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" id="comment" placeholder="Type Here" style="height: 25px; width: 500px;">
+                <br>
+                <p style="padding-left: 40px;">
+                    <input type="button" value="Submit" onclick="submitCommentFunction()">
+                    <input type="reset" value="Clear" onclick="clearCommentFunction()">
+                </p>
+            </form>
+        </p>
+        
+        <p class="text" id="submittedComment" style="text-align: left;"></p>
+        <script>
+            //Function to submit a comment.
+            function submitCommentFunction(){
+                var userComment = document.getElementById("comment").value;
+                if(userComment == "")
+                {
+                    submittedComment = "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No comment submitted. You must type something in the comment box to post a comment.</b>"
+                }
+                else{
+                    submittedComment = "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Posted comment</b>: " + userComment;
+                }
+                document.getElementById("submittedComment").innerHTML = submittedComment;
+            }
+
+            //Function to clear a comment. 
+            function clearCommentFunction(){;
+                document.getElementById("submittedComment").innerHTML = "";
+            }
+        </script>  
+    </div>
+    <br><br><br><br><br><br><br>
+
+    <!--Page Links Details-->
+    <p style="text-align: center;"> 
+        <a href="Home.html": style="font-size: 18px; padding: 30px;"><b>Home</b></a>
+        <a href="Profile.html": style="font-size: 18px; padding: 30px;"><b>Profile</b></a>
+        <a href="Reflection.html": style="font-size: 18px; padding: 30px;"><b>Reflections</b></a>
+        <a href="Qualifications.html": style="font-size: 18px; padding: 30px;"><b>Qualifications</b></a>
+        <a href="Achievements.html": style="font-size: 18px; padding: 30px;"><b>Achievements</b></a>
+        <a href="Communications.html": style="font-size: 18px; padding: 30px;"><b>Communications</b></a>
+    </p>
+    <br><br>
+
+    <!--"Go To Top" Link Details-->
+    <p style="text-align: center;"> 
+        <a href="#commPageHeader": style="font-size: 18px;"><b>Go To Top</b></a>
+    </p>
+    
+</body>
+</html>
